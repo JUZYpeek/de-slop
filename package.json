@@ -1,0 +1,62 @@
+{
+  "name": "de-slop-cli",
+  "version": "1.0.0",
+  "description": "Eliminate AI slop in UI, copywriting, animations, and code — enforce Senior Software Engineer & Principal Designer craft via CLI rules and codebase linting.",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://github.com/JUZYpeek/de-slop#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JUZYpeek/de-slop.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JUZYpeek/de-slop/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "de-slop": "./bin/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "bin",
+    "dist",
+    "templates",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "node -e \"import('node:fs').then(fs => fs.rmSync('dist', { recursive: true, force: true }))\"",
+    "prepublishOnly": "npm run clean && npm run build && npm test"
+  },
+  "keywords": [
+    "cli",
+    "ai-slop",
+    "linter",
+    "cursorrules",
+    "claude",
+    "dx",
+    "code-quality",
+    "design-system"
+  ],
+  "dependencies": {
+    "commander": "^13.1.0",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.3"
+  }
+}
