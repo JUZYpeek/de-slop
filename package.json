@@ -16,7 +16,7 @@
     "node": ">=18"
   },
   "bin": {
-    "de-slop": "./bin/cli.js"
+    "de-slop": "bin/cli.js"
   },
   "exports": {
     ".": {
