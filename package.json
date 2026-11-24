@@ -1,5 +1,5 @@
 {
-  "name": "de-slop-cli",
+  "name": "@juzy/de-slop",
   "version": "1.0.0",
   "description": "Eliminate AI slop in UI, copywriting, animations, and code — enforce Senior Software Engineer & Principal Designer craft via CLI rules and codebase linting.",
   "type": "module",

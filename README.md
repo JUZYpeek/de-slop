@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/de-slop-cli"><img src="https://img.shields.io/npm/v/de-slop-cli?style=flat-square&color=18181b&labelColor=09090b" alt="npm version" /></a>
+  <a href="https://www.npmjs.com/package/@juzy/de-slop"><img src="https://img.shields.io/npm/v/@juzy/de-slop?style=flat-square&color=18181b&labelColor=09090b" alt="npm version" /></a>
   <a href="https://github.com/JUZYpeek/de-slop/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/JUZYpeek/de-slop/ci.yml?branch=main&style=flat-square&label=CI&labelColor=09090b" alt="CI status" /></a>
   <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-18181b?style=flat-square&labelColor=09090b" alt="MIT License" /></a>
   <img src="https://img.shields.io/badge/TypeScript-Strict-3178c6?style=flat-square&labelColor=09090b" alt="TypeScript Strict" />
@@ -112,14 +112,14 @@ export function LaunchControl({ tier, onLaunch }: HeroProps) {
 
 ```bash
 # Interactive setup
-npx de-slop-cli init
+npx @juzy/de-slop init
 
 # Or target specific configs directly
-npx de-slop-cli init --cursor
-npx de-slop-cli init --claude
-npx de-slop-cli init --antigravity
-npx de-slop-cli init --gemini
-npx de-slop-cli init --all
+npx @juzy/de-slop init --cursor
+npx @juzy/de-slop init --claude
+npx @juzy/de-slop init --antigravity
+npx @juzy/de-slop init --gemini
+npx @juzy/de-slop init --all
 ```
 
 Rules are wrapped between `<!-- de-slop:start -->` and `<!-- de-slop:end -->` markers. Existing instructions in `CLAUDE.md`, `.cursorrules`, `.antigravity/rules.md`, or `.gemini/styleguide.md` stay untouched, and re-running `de-slop init` updates the managed block idempotently.
@@ -128,16 +128,16 @@ Rules are wrapped between `<!-- de-slop:start -->` and `<!-- de-slop:end -->` ma
 
 ```bash
 # Scan the current repository
-npx de-slop-cli scan
+npx @juzy/de-slop scan
 
 # Scan a specific file or directory
-npx de-slop-cli scan src/components
+npx @juzy/de-slop scan src/components
 
 # Automatically remove safe narrating comments and cliché copy phrases
-npx de-slop-cli scan src --fix
+npx @juzy/de-slop scan src --fix
 
 # Enforce a minimum Craft Score in CI
-npx de-slop-cli scan src --min-score 90
+npx @juzy/de-slop scan src --min-score 90
 ```
 
 Example terminal output:
